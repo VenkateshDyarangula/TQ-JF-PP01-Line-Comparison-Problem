@@ -1,6 +1,6 @@
 using System;
 
-namespace UC1_Line_Using_Cartesian_System
+namespace UC2_Check_Equal_Lines
 {
     class Program
     {
@@ -10,15 +10,33 @@ namespace UC1_Line_Using_Cartesian_System
             return Math.Sqrt(Math.Pow(x2 - x1, 2) +
                           Math.Pow(y2 - y1, 2) * 1.0);
         }
-        static void Main(string[] args)
+        static int readLines()
         {
-            Console.WriteLine("Enetr x1, y1 and x2, y2 Values");
-            int x1 = Convert.ToInt32(Console.ReadLine());
-            int y1 = Convert.ToInt32(Console.ReadLine());
-            int x2 = Convert.ToInt32(Console.ReadLine());
-            int y2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(Math.Round(distance(x1, y1, x2, y2) * 100000.0) / 100000.0);
+            return Convert.ToInt32(Console.ReadLine());
         }
 
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter for parameters (x1, y1, x2, y2 and x3, y3, x4, y4)Line 1 and Line 2");//"Eneter for Line 1 and Line 2: (x1, y1 x2, y2) and (x3, y3, x4, y4) Values");
+            int x1 = readLines();
+            int y1 = readLines();
+            int x2 = readLines();
+            int y2 = readLines();
+            //line2
+            int x3 = readLines();
+            int y3 = readLines();
+            int x4 = readLines();
+            int y4 = readLines();
+            double Line1 = (Math.Round(distance(x1, y1, x2, y2) * 100000.0) / 100000.0);
+            //Console.WriteLine(Line1);
+            double Line2 = (Math.Round(distance(x3, y3, x4, y4) * 100000.0) / 100000.0);
+            Console.WriteLine(Line1);
+            Console.WriteLine(Line2);
+            if (Line1.Equals(Line2))
+                Console.WriteLine("Two Lines are Equel");
+            else
+                Console.WriteLine("Two Lines are Not Equel");
+        }
     }
 }
+
