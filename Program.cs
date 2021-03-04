@@ -17,7 +17,7 @@ namespace UC2_Check_Equal_Lines
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter for parameters (x1, y1, x2, y2 and x3, y3, x4, y4)Line 1 and Line 2");//"Eneter for Line 1 and Line 2: (x1, y1 x2, y2) and (x3, y3, x4, y4) Values");
+            Console.WriteLine("Enter for parameters (x1, y1, x2, y2 and x3, y3, x4, y4)Line 1 and Line 2");
             int x1 = readLines();
             int y1 = readLines();
             int x2 = readLines();
