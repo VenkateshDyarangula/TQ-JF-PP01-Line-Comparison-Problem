@@ -1,6 +1,6 @@
 using System;
 
-namespace UC2_Check_Equal_Lines
+namespace UC3_Compare_Two_Lines
 {
     class Program
     {
@@ -14,7 +14,6 @@ namespace UC2_Check_Equal_Lines
         {
             return Convert.ToInt32(Console.ReadLine());
         }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Enter for parameters (x1, y1, x2, y2 and x3, y3, x4, y4)Line 1 and Line 2");//"Eneter for Line 1 and Line 2: (x1, y1 x2, y2) and (x3, y3, x4, y4) Values");
@@ -34,9 +33,10 @@ namespace UC2_Check_Equal_Lines
             Console.WriteLine(Line2);
             if (Line1.Equals(Line2))
                 Console.WriteLine("Two Lines are Equel");
-            else
-                Console.WriteLine("Two Lines are Not Equel");
+            else if (Line1 > Line2)
+                Console.WriteLine("Line 1 is Greater than Line 2");
+            else if (Line1 < Line2)
+                Console.WriteLine("Line 1 is Lesser than Line 2");
         }
     }
 }
-
