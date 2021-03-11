@@ -33,10 +33,17 @@ namespace UC3_Compare_Two_Lines
             Console.WriteLine(Line2);
             if (Line1.Equals(Line2))
                 Console.WriteLine("Two Lines are Equel");
-            else if (Line1 > Line2)
-                Console.WriteLine("Line 1 is Greater than Line 2");
-            else if (Line1 < Line2)
-                Console.WriteLine("Line 1 is Lesser than Line 2");
+             //CompareTo Method
+             int status = Line1.CompareTo(Line2);
+            if (status > 0)
+                Console.WriteLine("Line1 is greater than Line2",
+                                            Line1, Line2);
+            else if (status < 0)
+                Console.WriteLine("Line1 is Lesse than Line2",
+                                         Line1, Line2);
+            else
+                Console.WriteLine("Two Lines are Equel",
+                                        Line1, Line2);
         }
     }
 }
